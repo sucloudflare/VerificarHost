@@ -46,7 +46,6 @@ Licença
 
 Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter detalhes.
 
-
 MIT License
 
 Copyright (c) 2023 Edson Bruno
