@@ -9,7 +9,7 @@ Este script Python utiliza a biblioteca Scapy para realizar uma varredura de por
 - Python 3.x
 - verificar_host
 
-Você pode instalar a biblioteca Scapy usando o seguinte comando:
+Você pode instalar a biblioteca verificar_host usando o seguinte comando:
 
 ```bash
    pip install verificar_host
