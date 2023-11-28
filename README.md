@@ -46,8 +46,6 @@ Licença
 
 Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter detalhes.
 
-lua
-
 
 MIT License
 
