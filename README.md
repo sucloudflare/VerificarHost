@@ -20,7 +20,7 @@ Você pode instalar a biblioteca verificar_host usando o seguinte comando:
 Uso
 
 
-Abra o arquivo port_scanner.py em um editor de texto.
+Abra o arquivo verificar_host.py em um editor de texto.
 
    Modifique a lista hosts para incluir os hosts que você deseja analisar. Exemplo:
 
@@ -32,7 +32,7 @@ Execute o script:
 
 bash
 
-    python port_scanner.py
+    python verificar_host.py
 
   O script enviará pacotes para as portas especificadas nos hosts e imprimirá as portas abertas.
 
