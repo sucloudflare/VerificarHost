@@ -1,5 +1,7 @@
 # VerificarHost
 
+<img src='https://egx9daq4q4y.exactdn.com/wp-content/uploads/2020/12/hacking.jpg?strip=all&lossy=1&w=900&ssl=1'>
+
 # Scanner de Portas em Python usando verificar_host
 
 Este script Python utiliza a biblioteca Scapy para realizar uma varredura de portas em um ou mais hosts. A varredura de portas é uma técnica comumente usada em testes de penetração para identificar quais portas em um host estão abertas e podem ser vulneráveis.
