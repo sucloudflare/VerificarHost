@@ -14,7 +14,7 @@ Este script Python utiliza a biblioteca Scapy para realizar uma varredura de por
 Você pode instalar a biblioteca verificar_host usando o seguinte comando:
 
 ```bash
-   pip install verificarhost
+   pip install verificar_host
 ```
 
 Uso
@@ -32,7 +32,7 @@ Execute o script:
 
 bash
 
-    python verificarhost.py
+    python verificar_host.py
 
   O script enviará pacotes para as portas especificadas nos hosts e imprimirá as portas abertas.
 
