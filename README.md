@@ -55,5 +55,42 @@ MIT License
 Copyright (c) 2023 Edson Bruno
 
 
+h1>Port Scanner</h1>
+
+<p>Um script simples de varredura de portas em Python que verifica se determinadas portas em um host estão abertas.</p>
+
+<h2>Requisitos</h2>
+
+<ul>
+    <li>Python 3.x</li>
+</ul>
+
+<h2>Uso</h2>
+
+<p>Execute o script da seguinte maneira:</p>
+
+<pre>
+<code>python portscan.py &lt;host&gt; &lt;portas&gt;</code>
+</pre>
+
+<p>Se nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão: 21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135.</p>
+
+<p>Exemplo:</p>
+
+<pre>
+<code>python portscan.py google.com 80,443,8080</code>
+</pre>
+
+<h2>Contribuindo</h2>
+
+<p>Sinta-se à vontade para contribuir com melhorias, correções de bugs ou adição de recursos. Abra uma issue para discutir grandes alterações antes de enviar um pull request.</p>
+
+<h2>Aviso</h2>
+
+<p>Este script é fornecido apenas para fins educacionais. Não use este script para varredura de portas em sistemas que você não possui ou não tem permissão para testar.</p>
+
+<h2>Licença</h2>
+
+<p>Este projeto está licenciado sob a <a href="LICENSE">MIT License</a>.</p>
 
 
