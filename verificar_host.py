@@ -20,9 +20,9 @@ def exibir_logo():
 
 def exibir_ajuda():
     print("\nUso:")
-    print("python portscan.py <host> <portas>")
+    print("sudo python3 verificar_host.py <host> <portas>")
     print("\nExemplo:")
-    print("python portscan.py google.com 80,443,8080")
+    print("sudo python3 verificar_host.py google.com 80,443,8080")
     print("\nSe nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão:")
     print("21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135")
 
@@ -42,7 +42,7 @@ def scan(host, ports):
         print("Error:", e)
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 2 and sys.argv[1] in ('-h', '--help'):
+    if len(sys.argv) < 2 or sys.argv[1] in ('-h', '--help'):
         exibir_ajuda()
     else:
         host = sys.argv[1]
