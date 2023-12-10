@@ -44,9 +44,10 @@ h1>Port Scanner</h1>
 <p>Se nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão: 21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135.</p>
 
 <p>Exemplo:</p>
-
 <pre>
    <p>1</p><code>sudo python3 verificar_host.py</code>code>
+</pre>
+<pre>
    <p>2</p><code>cd VerificarHost<br>
 sudo python3 verificar_host.py google.com 80,443,8080</code>
 </pre>
