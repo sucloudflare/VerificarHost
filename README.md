@@ -23,38 +23,6 @@ pip3 install scapy
 ```
 Uso
 
-
-Abra o arquivo verificar_host.py em um editor de texto.
-
-   Modifique a lista hosts para incluir os hosts que você deseja analisar. Exemplo:
-
-   python
-
-hosts = ["google.com", "example.com"]
-
-Execute o script:
-
-bash
-
-    python3 verificar_host.py
-
-  O script enviará pacotes para as portas especificadas nos hosts e imprimirá as portas abertas.
-
-Aviso
-
-Este script deve ser usado apenas para fins educacionais ou em ambientes nos quais você tenha permissão para realizar varreduras de portas. A execução de varreduras sem autorização pode violar políticas de segurança e leis.
-Contribuições
-
-Contribuições são bem-vindas! Se você encontrar problemas ou melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
-Licença
-
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter detalhes.
-
-MIT License
-
-Copyright (c) 2023 Edson Bruno
-
-
 h1>Port Scanner</h1>
 
 <p>Um script simples de varredura de portas em Python que verifica se determinadas portas em um host estão abertas.</p>
@@ -70,7 +38,7 @@ h1>Port Scanner</h1>
 <p>Execute o script da seguinte maneira:</p>
 
 <pre>
-<code>python portscan.py &lt;host&gt; &lt;portas&gt;</code>
+<code>python verificar_host.py &lt;host&gt; &lt;portas&gt;</code>
 </pre>
 
 <p>Se nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão: 21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135.</p>
@@ -78,7 +46,8 @@ h1>Port Scanner</h1>
 <p>Exemplo:</p>
 
 <pre>
-<code>python portscan.py google.com 80,443,8080</code>
+<code>cd VerificarHost<br>
+sudo python3 verificar_host.py google.com 80,443,8080</code>
 </pre>
 
 <h2>Contribuindo</h2>
