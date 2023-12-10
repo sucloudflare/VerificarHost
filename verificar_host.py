@@ -14,8 +14,7 @@ def verificar_hosts():
                                              ▀                                                               
     \033[94m[✔] https://github.com/sucloudflare/VerificarHost   [✔]
     \033[94m[✔]            Version 1.1               [✔]
-                                        
-    \033[97m"""
+     \033[97m"""
 
     print(verificarhost_logo)
 
