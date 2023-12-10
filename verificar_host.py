@@ -1,7 +1,7 @@
 # Importa todas as funcionalidades da biblioteca Scapy
 from scapy.all import *
 
-def verificar_hosts():
+def exibir_logo():
     verificarhost_logo = """\033[93m
        ▄█    █▄       ▄████████  ▄████████    ▄█   ▄█▄  ▄█  ███▄▄▄▄      ▄██████▄
       ███    ███     ███    ███ ███    ███   ███ ▄███▀ ███  ███▀▀▀██▄   ███    ███
@@ -17,7 +17,6 @@ def verificar_hosts():
      \033[97m"""
 
     print(verificarhost_logo)
-
 
 def obter_endereco_ip(nome_do_host):
     try:
@@ -35,6 +34,8 @@ def obter_endereco_ip(nome_do_host):
 
 def verificar_hosts():
     while True:
+        exibir_logo()
+
         nome_do_host = input("Digite o nome do host (exemplo: www.google.com): ")
 
         if not nome_do_host:
