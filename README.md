@@ -38,7 +38,7 @@ h1>Port Scanner</h1>
 <p>Execute o script da seguinte maneira:</p>
 
 <pre>
-<code> sudo python3 verificar_host.py --help &lt;host&gt; &lt;portas&gt;</code>
+<code>sudo python3 verificar_host.py --help &lt;host&gt; &lt;portas&gt;</code>
 </pre>
 
 <p>Se nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão: 21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135.</p>
