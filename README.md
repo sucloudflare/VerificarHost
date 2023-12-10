@@ -16,7 +16,7 @@ Você pode instalar a biblioteca verificar_host usando o seguinte comando:
 ```bash
    pip3 install verificar_host
 ```
-Se não pegar: 
+Caso não pegue, versão alternativa: 
 ```
 pip3 install --upgrade scapy
 pip3 install scapy
