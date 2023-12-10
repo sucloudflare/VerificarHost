@@ -30,7 +30,9 @@ Uso
 <p>Execute o script da seguinte maneira:</p>
 
 <pre>
-<code>sudo python3 verificar_host.py -h
+<code>
+cd VerificarHost
+sudo python3 verificar_host.py -h
 </code>
 </pre>
 
@@ -39,7 +41,6 @@ Uso
 <p>Exemplo:
 </pre>
 <pre>
-<code>cd VerificarHost<br>
 sudo python3 verificar_host.py google.com 80,443,8080</code>
 </pre>
 
