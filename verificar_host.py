@@ -1,12 +1,4 @@
-correta.
 
-User
-o codigo todo
-ChatGPT
-Desculpe pela confusão anterior. Vou fornecer o código completo com as correções:
-
-python
-Copy code
 # Importa todas as funcionalidades da biblioteca Scapy
 from scapy.all import *
 
