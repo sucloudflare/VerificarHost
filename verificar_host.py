@@ -44,7 +44,7 @@ def scan(host, ports):
 if __name__ == "__main__":
     if len(sys.argv) >= 2 and sys.argv[1] in ('-h', '--help'):
         exibir_ajuda()
-    elif len(sys.argv) >= 2:
+    else:
         host = sys.argv[1]
         if len(sys.argv) >= 3:
             ports = sys.argv[2].split(",")
@@ -52,5 +52,3 @@ if __name__ == "__main__":
             ports = [21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135]
 
         scan(host, ports)
-    else:
-        exibir_ajuda()
