@@ -18,7 +18,6 @@ def verificar_hosts():
 
     print(verificarhost_logo)
 
-from scapy.all import *
 
 def obter_endereco_ip(nome_do_host):
     try:
@@ -40,6 +39,11 @@ def verificar_hosts():
 
         if not nome_do_host:
             print("\033[91m[!] Nenhum host fornecido. Digite pelo menos um host.\033[97m")
+            continue
+
+        # Verifica se o host foi inserido corretamente
+        if "." not in nome_do_host:
+            print("\033[91m[!] Nome de host inválido. Certifique-se de incluir um domínio válido (exemplo: www.google.com).\033[97m")
             continue
 
         obter_endereco_ip(nome_do_host)
