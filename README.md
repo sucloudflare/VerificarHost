@@ -46,7 +46,8 @@ h1>Port Scanner</h1>
 <p>Exemplo:</p>
 
 <pre>
-<code>cd VerificarHost<br>
+   <p>1</p><code>sudo python3 verificar_host.py</code>code>
+   <p>2</p><code>cd VerificarHost<br>
 sudo python3 verificar_host.py google.com 80,443,8080</code>
 </pre>
 
