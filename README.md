@@ -36,9 +36,7 @@ Uso
 
 <p>Se nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão: 21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135.</p>
 
-<p>Exemplo:</p>
-<pre>
-  
+<p>Exemplo:
 </pre>
 <pre>
 <code>cd VerificarHost<br>
