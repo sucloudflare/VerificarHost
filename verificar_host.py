@@ -20,11 +20,13 @@ def exibir_logo():
 
 def exibir_ajuda():
     print("\033[96m\nUso:")
-    print("sudo python3 verificar_host.py <host> <portas>")
-    print("\nExemplo:")
-    print("sudo python3 verificar_host.py google.com 80,443,8080")
-    print("\nSe nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão:")
-    print("21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135")
+    print("\033[97m   sudo python3 verificar_host.py \033[92m<host> <portas>")
+    print("\033[96m\nExemplo:")
+    print("\033[97m   sudo python3 verificar_host.py \033[92mgoogle.com 80,443,8080")
+    print("\033[96m\nOpções:")
+    print("\033[97m   -h, --help    Exibir esta mensagem de ajuda")
+    print("\033[96m\nSe nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão:")
+    print("\033[97m   21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135")
 
 import socket
 import sys
@@ -43,6 +45,7 @@ def scan(host, ports):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] in ('-h', '--help'):
+        exibir_logo()
         exibir_ajuda()
     else:
         host = sys.argv[1]
@@ -51,4 +54,5 @@ if __name__ == "__main__":
         else:
             ports = [21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135]
 
+        exibir_logo()
         scan(host, ports)
