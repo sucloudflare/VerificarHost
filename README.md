@@ -14,12 +14,12 @@ Este script Python utiliza a biblioteca Scapy para realizar uma varredura de por
 Você pode instalar a biblioteca verificar_host usando o seguinte comando:
 
 ```bash
-   pip install verificar_host
+   pip3 install verificar_host
 ```
 Se não pegar: 
 ```
-pip install --upgrade scapy
-pip install scapy
+pip3 install --upgrade scapy
+pip3 install scapy
 ```
 Uso
 
