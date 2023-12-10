@@ -23,7 +23,7 @@ Caso não pegue, versão alternativa:
 ```
 Uso
 
-h1>Port Scanner</h1>
+<h1>Port Scanner</h1>
 
 <p>Um script simples de varredura de portas em Python que verifica se determinadas portas em um host estão abertas.</p>
 
