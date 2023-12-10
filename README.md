@@ -45,7 +45,7 @@ h1>Port Scanner</h1>
 
 <p>Exemplo:</p>
 <pre>
-   <code>sudo python3 verificar_host.py</code>code>
+   <code>sudo python3 verificar_host.py</code>
 </pre>
 <pre>
    <code>cd VerificarHost<br>
