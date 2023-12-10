@@ -18,28 +18,35 @@ def verificar_hosts():
 
     print(verificarhost_logo)
 
-    while True:
-        # Lista de hosts que serão analisados
-        hosts = input("Digite os hosts a serem analisados (separados por vírgula): ")
+from scapy.all import *
 
-        # Verifica se o input está vazio
-        if not hosts:
-            print("\033[91m[!] Hosts não fornecidos. Digite pelo menos um host.\033[97m")
+def obter_endereco_ip(nome_do_host):
+    try:
+        # Envia um pacote DNS para obter o endereço IP associado ao nome do host
+        resposta = sr1(IP(dst="8.8.8.8") / UDP(sport=RandShort(), dport=53) / DNS(rd=1, qd=DNSQR(qname=nome_do_host)), verbose=0, timeout=2)
+        
+        # Verifica se a resposta contém informações de IP
+        if resposta and resposta.haslayer(IP):
+            endereco_ip = resposta[IP].src
+            print(f'O endereço IP de {nome_do_host} é {endereco_ip}')
+        else:
+            print(f'Não foi possível obter o endereço IP para o host {nome_do_host}')
+    except Exception as e:
+        print(f'Erro ao obter o endereço IP: {str(e)}')
+
+def verificar_hosts():
+    while True:
+        nome_do_host = input("Digite o nome do host (exemplo: www.google.com): ")
+
+        if not nome_do_host:
+            print("\033[91m[!] Nenhum host fornecido. Digite pelo menos um host.\033[97m")
             continue
 
-        # Constrói um pacote IP com um segmento TCP para realizar a varredura de portas
-        pacote = IP(dst=hosts)/TCP(dport=(1, 500), flags="S")
+        obter_endereco_ip(nome_do_host)
 
-        # Envia o pacote construído e aguarda por respostas, com um timeout de 1 segundo
-        respondidos, nao_respondidos = sr(pacote, timeout=1)
-
-        # Itera sobre as respostas recebidas
-        for n in range(len(respondidos)):
-            # Imprime o endereço IP de destino e a porta de destino para cada resposta
-            print("{} -> {}".format(respondidos[n][0][IP].dst, respondidos[n][0][TCP].dport))
-
-        novamente = input("Deseja verificar hosts novamente? (s/n): ").lower()
+        novamente = input("Deseja verificar outro host? (s/n): ").lower()
         if novamente != 's':
             break
 
-verificar_hosts()
+if __name__ == "__main__":
+    verificar_hosts()
