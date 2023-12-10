@@ -17,41 +17,29 @@ def exibir_logo():
      \033[97m"""
 
     print(verificarhost_logo)
+import socket
+import sys
 
-def obter_endereco_ip(nome_do_host):
+def scan(host, ports):
     try:
-        # Envia um pacote DNS para obter o endereço IP associado ao nome do host
-        resposta = sr1(IP(dst="8.8.8.8") / UDP(sport=RandShort(), dport=53) / DNS(rd=1, qd=DNSQR(qname=nome_do_host)), verbose=0, timeout=2)
-        
-        # Verifica se a resposta contém informações de IP
-        if resposta and resposta.haslayer(IP):
-            endereco_ip = resposta[IP].src
-            print(f'O endereço IP de {nome_do_host} é {endereco_ip}')
-        else:
-            print(f'Não foi possível obter o endereço IP para o host {nome_do_host}')
+        for port in ports:
+            client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            client.settimeout(0.5)
+            code = client.connect_ex((host, int(port)))
+            if code == 0:
+                print("[+] {} open".format(port))
+            client.close()
     except Exception as e:
-        print(f'Erro ao obter o endereço IP: {str(e)}')
-
-def verificar_hosts():
-    while True:
-        exibir_logo()
-
-        nome_do_host = input("Digite o nome do host (exemplo: www.google.com): ")
-
-        if not nome_do_host:
-            print("\033[91m[!] Nenhum host fornecido. Digite pelo menos um host.\033[97m")
-            continue
-
-        # Verifica se o host foi inserido corretamente
-        if "." not in nome_do_host:
-            print("\033[91m[!] Nome de host inválido. Certifique-se de incluir um domínio válido (exemplo: www.google.com).\033[97m")
-            continue
-
-        obter_endereco_ip(nome_do_host)
-
-        novamente = input("Deseja verificar outro host? (s/n): ").lower()
-        if novamente != 's':
-            break
+        print("Error:", e)
 
 if __name__ == "__main__":
-    verificar_hosts()
+    if len(sys.argv) >= 2:
+        host = sys.argv[1]
+        if len(sys.argv) >= 3:
+            ports = sys.argv[2].split(",")
+        else:
+            ports = [21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135]
+
+        scan(host, ports)
+    else:
+        print("Usage: python portscan.py google.com 22,23,80,443")
