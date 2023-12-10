@@ -17,6 +17,15 @@ def exibir_logo():
      \033[97m"""
 
     print(verificarhost_logo)
+
+def exibir_ajuda():
+    print("\nUso:")
+    print("python portscan.py <host> <portas>")
+    print("\nExemplo:")
+    print("python portscan.py google.com 80,443,8080")
+    print("\nSe nenhum argumento for fornecido para as portas, as seguintes portas serão verificadas por padrão:")
+    print("21, 22, 23, 25, 80, 443, 445, 8080, 8443, 3306, 139, 135")
+
 import socket
 import sys
 
@@ -33,7 +42,9 @@ def scan(host, ports):
         print("Error:", e)
 
 if __name__ == "__main__":
-    if len(sys.argv) >= 2:
+    if len(sys.argv) >= 2 and sys.argv[1] in ('-h', '--help'):
+        exibir_ajuda()
+    elif len(sys.argv) >= 2:
         host = sys.argv[1]
         if len(sys.argv) >= 3:
             ports = sys.argv[2].split(",")
@@ -42,4 +53,4 @@ if __name__ == "__main__":
 
         scan(host, ports)
     else:
-        print("Usage: python portscan.py google.com 22,23,80,443")
+        exibir_ajuda()
