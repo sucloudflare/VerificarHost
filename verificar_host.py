@@ -21,7 +21,7 @@ print(verificarhost_logo)
 hosts = input("Digite os hosts a serem analisados (separados por vírgula): ").split(",")
 
 # Constrói um pacote IP com um segmento TCP para realizar a varredura de portas
-pacote = IP(dst=hosts)/TCP(dport=(1, 500), flags="S")
+pacote = IP(dst=hosts) / TCP(dport=(1, 500), flags="S")
 
 # Envia o pacote construído e aguarda por respostas, com um timeout de 1 segundo
 respondidos, nao_respondidos = sr(pacote, timeout=1)
