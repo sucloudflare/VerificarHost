@@ -19,7 +19,7 @@ def exibir_logo():
     print(verificarhost_logo)
 
 def exibir_ajuda():
-    print("\nUso:")
+    print("\033[96m\nUso:")
     print("sudo python3 verificar_host.py <host> <portas>")
     print("\nExemplo:")
     print("sudo python3 verificar_host.py google.com 80,443,8080")
@@ -36,10 +36,10 @@ def scan(host, ports):
             client.settimeout(0.5)
             code = client.connect_ex((host, int(port)))
             if code == 0:
-                print("[+] {} open".format(port))
+                print("\033[92m[+] {} open".format(port))
             client.close()
     except Exception as e:
-        print("Error:", e)
+        print("\033[91mError:", e)
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] in ('-h', '--help'):
