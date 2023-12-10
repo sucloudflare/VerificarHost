@@ -32,7 +32,7 @@ Execute o script:
 
 bash
 
-    python verificar_host.py
+    python3 verificar_host.py
 
   O script enviará pacotes para as portas especificadas nos hosts e imprimirá as portas abertas.
 
