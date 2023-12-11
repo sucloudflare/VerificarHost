@@ -56,6 +56,8 @@ sudo python3 verificar_host.py google.com 80,443,8080</code>
 
 <p>Este projeto está licenciado sob a <a href="LICENSE">MIT License</a>.</p>
 
+<h2>IMG</h2>
+
 <img src='./a.png'>
 
 
